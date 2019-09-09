@@ -1,0 +1,42 @@
+<!doctype html>
+<html>
+
+<head>
+    <title>API Demo</title>
+    <link rel="stylesheet" type="text/css" href="demo.css">
+    <script src="demo.js"></script>
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+</head>
+
+<body>
+    <div id='demo'>
+        <h1>API Demo</h1>
+        <div id='sqrt'>
+            <h2>Square Root</h2>
+            <p>Enter in a number >= 0</p>
+            <form id="sqrt-form">
+                Number: <input id="sqrt-num" type="text" name="sqrt-num" value="16"><br>
+                <input type="button" onclick="call_API('sqrt')" value="Try It">
+            </form>
+            <h3 id="sqrt-result" hidden>Result: 0</h3>
+        </div>
+        
+        <div id='fib'>
+            <h2>Fibonacci</h2>
+            <p>Enter in a number >= 0</p>
+            <form id="fib-form">
+                Number: <input id="fib-num" type="text" name="fib-num" value="7"><br>
+                <input type="button" onclick="call_API('fib')" value="Try It">
+            </form>
+            <h3 id="fib-result" hidden>Result: 0</h3>
+            <p id='note'>Note that JS can only support integers up to 53 bits but the API will properly return
+                    all the correct digits up to a limit of n=950 within mere milliseconds. Try larger 
+                    values by calling the API yourself.
+            </p>
+        </div>
+    </div>
+    <a href='https://github.com/GlexAomes' target='_blank'><i class="fab fa-github"></i></a>
+    <p id='end'>Alex Gomes</p>
+</body>
+
+</html>
