@@ -5,6 +5,7 @@ from flask_restful import Resource, Api, reqparse
 from flask_cors import CORS, cross_origin
 
 from task_delegator import *
+from db_controller import *
 
 ### --- CONFIGS AND MISC
 
@@ -53,6 +54,12 @@ class Fib(Resource):
 api.add_resource(HelloWorld, '/')
 api.add_resource(Sqrt, '/sqrt/<int:num>')
 api.add_resource(Fib, '/fib/<int:num>')
+
+### --- Database Controller
+
+dbc = DB_Controller(app)
+dbc.create_user('Glex', 'glexaomes@gmail.com')
+dbc.query_all_users()
 
 ### --- Headless Entry Point
 
